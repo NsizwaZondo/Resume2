@@ -335,30 +335,100 @@
       }
     }
 
-    .projects-container {
-      width: 100%;
-      margin: 0%;
-      padding: 0%;
-    }
+    .projects {
+  margin-left: 13rem;
+  padding-left: 0;
+  padding-right: 1rem;
+}
 
-    .scroll-container {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    width: 100%;
+.projects-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+/* Scrollable container */
+.projects-item {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  width: 100%;
+
+  /* Hide scrollbar visually but allow scroll */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.projects-item::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Project item links */
+.projects-item a {
+  flex-shrink: 0;
+  width: 300px;
+  display: block;
+}
+
+.projects-item a img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Scroll buttons */
+.projects .scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.scroll-btn i {
+  font-size: 3rem;
+}
+
+.projects .scroll-btn.left {
+  left: 1%;
+}
+
+.projects .scroll-btn.right {
+  right: 1%;
+}
+
+/* Hide scroll buttons initially */
+.projects .scroll-btn.hidden {
+  display: none;
+}
+
+/* Responsive: smaller buttons on small screens */
+@media (max-width: 768px) {
+  .projects {
+    margin-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .scroll-container img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    flex-shrink: 0;
+  .projects-item a {
+    width: 240px;
   }
 
-  .scroll-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
+  .projects .scroll-btn {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.7rem;
   }
+}
