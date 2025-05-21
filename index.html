@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lulama Nsizwa Zondo - Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta name="description" content="Lulama Nsizwa Zondo - IT Graduate and Web Developer Portfolio" />
   <meta name="author" content="Lulama Nsizwa Zondo" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -52,7 +53,7 @@
   </div>
 
   <!-- About Section -->
-  <section id="about">
+  <section id="about" class="about">
     <h2>About Me</h2>
     <div class="about-container">
       <!-- <img src="WhatsApp Image 2025-05-11 at 11.00.58_42add85b.jpg" alt="Lulama Zondo" class="about-img"> -->
@@ -63,16 +64,21 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
+  <section id="projects" class="projects">
     <h2>Projects</h2>
+    <div class="projects-wrapper">
+      <button class="scroll-btn left"><i class="fa-solid fa-circle-arrow-left"></i></button>
 
-    <div id="projects-item"class="projects-item" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 300px; overflow-x: auto; width: 100%"; >
-      <a href="https://nsizwazondo.github.io/LuxRentals-demo/"><img src="Screenshot 2025-05-20 210405.png" alt="Lux Reantals" style="width: 600px; height: 300px;"></a>
+        <div id="projects-item"class="projects-item">
+          <a href="https://nsizwazondo.github.io/LuxRentals-demo/"><img src="Screenshot 2025-05-20 210405.png" alt="Lux Reantals"></a>
+        </div>
+
+      <button class="scroll-btn right"><i class="fa-solid fa-circle-arrow-right"></i></button>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" class="contact">
     <div class="contact-container">
       <h2>Contact Me</h2>
       <p>I'd love to hear from you! Reach out through any of the platforms below:</p>
